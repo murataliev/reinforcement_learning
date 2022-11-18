@@ -1,0 +1,28 @@
+<mujoco model="example">
+  <compiler coordinate="global"/>
+
+  <default>
+    <geom rgba=".8 .6 .4 1"/>
+    
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+    </default>
+      
+  </default>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2=".6 .8 1" width="256" height="256"/>
+    <mesh file="znofinger.obj" scale="0.01 0.01 0.01"/>
+    <mesh file="zsurmoule.obj"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 1 1" dir="0 -1 -1" diffuse="1 1 1"/>
+    <camera name="track" mode="trackcom" pos="0 -3 0.3" xyaxes="1 0 0 0 0 1"/> 
+
+    <body>
+      <geom mesh="znofinger" class="visual"/>
+<!--       <geom mesh="zsurmoule" class="visual"/> -->
+    </body>
+  </worldbody>
+</mujoco>
