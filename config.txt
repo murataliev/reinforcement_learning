@@ -1,0 +1,5 @@
+Host github
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/akbar_github_ssh_key
+   IdentitiesOnly yes
